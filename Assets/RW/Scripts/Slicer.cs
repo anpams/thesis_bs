@@ -38,6 +38,12 @@ public class Slicer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //haptic event
+        ControllerHaptics haptics = GetComponentInParent<ControllerHaptics>();
+        if(haptics){
+            haptics.HapticEvent();
+        }
+
         SplitMesh(other.gameObject);
         Destroy(other.gameObject);
     }

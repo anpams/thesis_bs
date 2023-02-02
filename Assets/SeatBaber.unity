@@ -355,7 +355,7 @@ PrefabInstance:
     - target: {fileID: 8628461821950939323, guid: 788dd0804b91e18449070a8ae349c7e5,
         type: 3}
       propertyPath: m_Name
-      value: SaberRed
+      value: SaberRed (R)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 788dd0804b91e18449070a8ae349c7e5, type: 3}
@@ -515,6 +515,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &607405623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607405614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6435c03f6fb1c9449b3e2ffaba845983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hand: 5
 --- !u!1001 &647820361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -525,7 +538,7 @@ PrefabInstance:
     - target: {fileID: 75425967975256928, guid: cbe50d06bf46129479285c79f8d4221b,
         type: 3}
       propertyPath: m_Name
-      value: SaberBlue
+      value: SaberBlue (L)
       objectReference: {fileID: 0}
     - target: {fileID: 6293684640621295782, guid: cbe50d06bf46129479285c79f8d4221b,
         type: 3}
@@ -740,6 +753,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &647820371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647820362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6435c03f6fb1c9449b3e2ffaba845983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hand: 4
 --- !u!1 &989618765
 GameObject:
   m_ObjectHideFlags: 0
