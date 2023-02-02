@@ -48,6 +48,23 @@ public class VeggieBehaviour : MonoBehaviour
 
     void Update()
     {
-        // FILL IN
+        //if not using physics, update movement of the veggies
+        if (rb.isKinematic){
+            //move from origin to the position for th enode in the first second
+            dTime += Time.deltaTime;
+
+            if (dTime < 1.0f){
+                //lerp along the X/Y axis to the correct lane
+                Vector3 position= transform.position;
+                float z = position.z;
+                position.z = destination.z;
+
+                position = Vector3.Lerp(position, destination, dTime);
+                position.z =z;
+                transform.position = position;
+            }
+            //z axis
+            transform.Translate(movement * Time.deltaTime);
+        }
     }
 }
