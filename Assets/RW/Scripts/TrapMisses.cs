@@ -28,7 +28,7 @@
  * THE SOFTWARE.
  */
 
-using TMPro;
+using TMPro; //text mesh
 using UnityEngine;
 
 public class TrapMisses : MonoBehaviour
@@ -38,6 +38,12 @@ public class TrapMisses : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // FILL IN
+        //Create message
+        GameObject textMessage = Instantiate(quickMessage);
+        textMessage.transform.position= gameObject.transform.position;
+        textMessage.GetComponent<TextMeshPro>().text="Missed!";
+
+        //destroy missed gameObject
+        Destroy(other.gameObject);
     }
 }
