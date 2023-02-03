@@ -44,6 +44,6 @@ public class TrapMisses : MonoBehaviour
         textMessage.GetComponent<TextMeshPro>().text="Missed!";
 
         //destroy missed gameObject
-        Destroy(other.gameObject);
+        Destroy(other.gameObject); //is not working??
     }
 }
