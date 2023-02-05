@@ -36,7 +36,8 @@ using UnityEngine;
 public class VeggieGenerator : MonoBehaviour
 {
     // Prefab to be spawned.
-    public GameObject[] veggies;
+    //public GameObject[] veggies;
+    public GameObject[] cubes;
 
     // Interval between notes
     public float BPM = 172f;
@@ -54,8 +55,8 @@ public class VeggieGenerator : MonoBehaviour
         {0, 0, 0 },
         {-0.75f, -0.50f, 0 },
         {0.75f, -0.50f, 0 },
-        {-0.35f, -.35f, 0 },
-        {0.35f, -.35f, 0 },
+        //{-0.35f, -.35f, 0 },
+       // {0.35f, -.35f, 0 },
         {0.0f, 0f, 0 }
     };
 
@@ -82,19 +83,25 @@ public class VeggieGenerator : MonoBehaviour
 
     void CreateVeggie()
     {
-        if(veggies.Length ==0) return;
+       // if(veggies.Length ==0) return;
+        if(cubes.Length==0) return;
 
         //instatiate random model
-        int randomVeggie = Random.Range (0, veggies.Length -1);
+      /*  int randomVeggie = Random.Range (0, veggies.Length -1);
         GameObject veggie = Instantiate(veggies[randomVeggie]);
-        veggie.transform.position= transform.position;
+        veggie.transform.position= transform.position; */
+        int randomCube = Random.Range (0, cubes.Length -1);
+        GameObject cube = Instantiate(cubes[randomCube]);
+        cube.transform.position= transform.position;
 
         //choose line
-        int pos = Random.Range(0,5);
+        int pos = Random.Range(0,3);
         Vector3 destination= transform.position + new Vector3(startPositions[pos,0], startPositions[pos,1], startPositions[pos,2]);
 
         //add a behaviour component
-        VeggieBehaviour comp=(VeggieBehaviour) veggie.AddComponent(typeof(VeggieBehaviour));
+        //        VeggieBehaviour comp=(VeggieBehaviour) veggie.AddComponent(typeof(VeggieBehaviour));
+
+        VeggieBehaviour comp=(VeggieBehaviour) cube.AddComponent(typeof(VeggieBehaviour));
         comp.movement = new Vector3(0,0,-6);
         comp.destination = destination;
     }

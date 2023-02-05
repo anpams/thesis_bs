@@ -4,9 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/SeatBaber.unity
+    guid: 323007f3d0de1f34b9e696e06a283db0
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 58fdd946062a0ba4e86bfd62141c264c,
+      type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 5f2faa2a5ce6d93489cd45ae8f9c15d9,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d33e70c8a917e1843b6191ec8dee5c89,
       type: 2}

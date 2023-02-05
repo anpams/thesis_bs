@@ -15,9 +15,9 @@ public class TrapMisses : MonoBehaviour
         //Create message
         GameObject textMessage = Instantiate(quickMessage);
         textMessage.transform.position= gameObject.transform.position;
-        textMessage.GetComponent<TextMeshPro>().text="Missed!";
+        textMessage.GetComponent<TextMeshPro>().text="Miss";
 
         //destroy missed gameObject
-        Destroy(other.gameObject); //is not working??
+        Destroy(other.gameObject);
     }
 }

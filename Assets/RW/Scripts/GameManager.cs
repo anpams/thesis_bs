@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public int highScore { get; set; } = 0;
     public int score { get; set; } = 0;
     public int misses = 0;
-    public int maxMisses = 5;
+    public int maxMisses = 50000000;//to test
 
     public void Start()
     {
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
-        if (gameState == State.Menu && sabers[0].transform.parent && sabers[1].transform.parent){
+      /*  if (gameState == State.Menu && sabers[0].transform.parent && sabers[1].transform.parent){
             ChangeState(State.Level);
         }
         if (misses> maxMisses){
@@ -33,11 +33,11 @@ public class GameManager : MonoBehaviour
                 highScore = score;
             }
             ChangeState(State.Menu);
-        }
+        } */
     }
 
     public void ChangeState(State state)
-    {
+    { /*
         gameState = state;
         if (state == State.Menu){
             menu.SetActive(true);
@@ -48,6 +48,6 @@ public class GameManager : MonoBehaviour
             misses=0;
             menu.SetActive(false);
             level.SetActive(true);
-        }
+        }*/
     }
 }
