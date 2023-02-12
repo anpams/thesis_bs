@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public int highScore { get; set; } = 0;
     public int score { get; set; } = 0;
     public int misses = 0;
-    public int maxMisses = 5;//to test
+    public int maxMisses = 20;//to test
 
     public void Start()
     {
